@@ -20,7 +20,7 @@ Now it's time to get fetching! `cd` into the directory where you want your fuchs
 
 `curl -s "https://fuchsia.googlesource.com/fuchsia/+/master/scripts/bootstrap?format=TEXT" | base64 --decode | bash`
 
-If you didn't get any errors, congrats! Skip straight to chapter 3. If you got the cipd package error then click the link in your terminal and login with your google account and re-fetch. It will only take a tick since you've already got the source.
+If you didn't get any errors, congrats! Skip straight to chapter 3. If you got the cipd package error then click the link in your terminal and login with your google account and re-fetch (`jiri update`). It will only take a tick since you've already got the source.
 
 ### Chapter 2.5: Problems with fetching
 Sometimes it doesn't go so smoothly... but thats okay! We'll get that sorted in a tick.
