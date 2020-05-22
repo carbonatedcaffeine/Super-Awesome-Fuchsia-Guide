@@ -3,14 +3,20 @@ For people who are new to developing with fuchsia!
 
 ## Chapter One: Getting Ready
 You will need the following:
-* A desktop or laptop running Debian 10 or Ubuntu 18.04 (for best experience and easiness)
+* A desktop or laptop running Debian 10, Ubuntu 18.04 or MacOS (for best experience and easiness)
 * A fast internet connection (preferably ethernet)
 * Patience
 
 ## Chapter Two: Fetching Fuchsia
 Firstly you will need to get the dependencies to be able to fetch and build fuchsia. 
 
+for debian based systems: 
+
 `sudo apt install build-essential curl git python unzip`
+
+for MacOS based system:
+
+`xcode-select --install`
 
 And also install ccache for faster build times. (it really helps, trust me)
 
