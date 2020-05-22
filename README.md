@@ -69,4 +69,21 @@ make sure it's working with `sudo apt install vulkan-utils && vulkaninfo`
 
 and finnaly lauch aemu with `fx emu`. You can also add `--host-gpu` to use accelerated graphics. 
 
-## Chapter 5: Paving (coming soon)
+## Chapter 5: Paving
+If you have a supported device such as the pixelbook. You can pave fuchsia to your device, although you can pave on many other unsupported deivces, not everything will be supported such as your spicific ethernet.
+
+To make a bootable usb, you will need to use the `mkzedboot` command.
+
+`fx mkzedboot /dev/sdx` (replace `sdx` with your actual usb)
+
+When it's done, put the USB into the device you want to pave. Once it's booted you should see a "ZEDBOOT" ASCII art. Go to a new shell (press "tab" to switch shells) and get the device ready to install fuchsia.
+
+`install-disk-image init-partition-tables --block_device_path <BLOCK_DEVICE_PATH`
+
+To find out what your hard drives "BLOCK_DEVICE_PATH" is, use the `lsblk` command.
+
+Now it's time to listen carefully, plug an ethernet cable into your host (the device where the build is) and the other side will go into the target device (don't put it into your router). Now you will need to run the pave command to start uploading files to your device.
+
+`fx pave` 
+
+This will start the boot server and connects to the target device, then it uploads the fuchsia image and paves the device. 
